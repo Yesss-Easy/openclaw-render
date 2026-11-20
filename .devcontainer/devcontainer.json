@@ -1,0 +1,14 @@
+{
+  "name": "OpenClaw Gateway (Codespaces)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-24-bookworm",
+  "postCreateCommand": "npm install -g openclaw@latest",
+  "postStartCommand": "bash .devcontainer/start-gateway.sh",
+  "forwardPorts": [18789],
+  "portsAttributes": {
+    "18789": {
+      "label": "OpenClaw Gateway",
+      "onAutoForward": "openBrowser",
+      "visibility": "private"
+    }
+  }
+}
